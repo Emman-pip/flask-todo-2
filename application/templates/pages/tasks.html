@@ -5,4 +5,12 @@
 
 {% block body %}
     <h2>Current tasks</h2>
+    {% for item in tasks %}
+    
+    <div class="task-container">
+        <div class="task-name"> <h3>{{ item['taskName'] }} </h3></div>
+        <div class="desc">{{ item['Description'] }}</div>
+    </div>
+
+    {% endfor %}
 {% endblock body %}

@@ -10,7 +10,8 @@ def home():
 
 @bp.route("/tasks")
 def tasks():
-    return render_template('pages/tasks.html')
+    tasks = application.Todo.query.all()
+    return render_template('pages/tasks.html', tasks=tasks)
 
 @bp.route("/add-tasks", methods=("GET", "POST"))
 def addTasks():
