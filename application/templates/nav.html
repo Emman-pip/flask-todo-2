@@ -1,7 +1,14 @@
 <nav>
     <ul>
-        <li><a href="{{ url_for('pages.home') }}">HOME</a></li>
-        <li><a href="{{ url_for('pages.tasks') }}">TASKS</a></li>
-        <li><a href="{{ url_for('pages.addTasks') }}">ADD TASK</a></li>
+        <li>TODO NA EWAN</li>
+        <li>
+            <ul>
+                <li><a class="line-animation" href="{{ url_for('pages.home') }}">HOME</a></li>
+                <li><a class="line-animation" href="{{ url_for('pages.tasks') }}">TASKS</a></li>
+                <li><a class="line-animation" href="{{ url_for('pages.addTasks') }}">ADD</a></li>
+            </ul>
+        </li>
+
+
     </ul>
 </nav>
