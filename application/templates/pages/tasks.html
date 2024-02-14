@@ -5,16 +5,18 @@
 
 {% block body %}
     <h2>Current tasks</h2>
-    {% for item in tasks %}
-    
-    <div class="task-container">
-        <div class="task-name"> <h3>{{ item['taskName'] }} </h3></div>
-        <div class="desc">{{ item['Description'] }}</div>
-        <div class="buttons">
-            <a href="delete/{{ item.id }}">DELETE</a>
-            <a href="update/{{ item.id }}">UPDATE</a>
+    <div class="tasks">
+        {% for item in tasks %}
+        
+        <div class="task-container">
+            <div class="task-name"> <h3>{{ item['taskName'] }} </h3></div>
+            <div class="desc">{{ item['Description'] }}</div>
+            <div class="buttons">
+                <a href="delete/{{ item.id }}">DELETE</a>
+                <a href="update/{{ item.id }}">UPDATE</a>
+            </div>
         </div>
+    
+        {% endfor %}
     </div>
-
-    {% endfor %}
 {% endblock body %}
