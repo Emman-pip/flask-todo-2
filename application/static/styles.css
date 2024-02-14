@@ -48,6 +48,26 @@ form > input[type="submit"] {
     /* grid-column-start: -1; */
     /* grid-column-end: -2; */
     padding: 1rem;
+    background-color: var(--color-2);
+    color: var(--color-4);
+    font-weight: 800;
+    transition: 0.2s background-color;
+    cursor: pointer;
+}
+
+form > input[type="submit"]:hover {
+    background-color: #3d0000;
+}
+
+input[type="text"],
+textarea {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: 1px black solid;
+}
+
+textarea {
+    resize: none;
 }
 
 .tasks {
@@ -61,8 +81,37 @@ form > input[type="submit"] {
     border: 1px solid black;
     padding: 0.6rem;
     border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 a {
     text-decoration: none;
+}
+
+.delete-btn {
+    color:var(--color-4);
+    cursor: pointer;
+    background-color: var(--color-1);
+    padding: 0.3rem;
+    font-weight: 700;
+    transition: 0.2s background-color;
+}
+
+.delete-btn:hover {
+    background-color: #b14618;
+}
+
+.update-btn {
+    cursor: pointer;
+    background-color: var(--color-3);
+    padding: 0.3rem;
+    color: var(--color-4);
+    font-weight: 700;
+    transition: 0.2s background-color;
+}
+
+.update-btn:hover {
+    background-color: #313b67;
 }

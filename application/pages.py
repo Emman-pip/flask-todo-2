@@ -27,9 +27,7 @@ def addTasks():
         application.db.session.add(taskRecord)
         application.db.session.commit()
         # return redirect(url_for('pages/addTasks'))
-        
-        
-        print(request.form["task"])
+        return redirect(url_for('pages.tasks'))
     return render_template('pages/addTasks.html')
 
 @bp.route('/delete/<id>')

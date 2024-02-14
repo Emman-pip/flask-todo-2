@@ -12,8 +12,8 @@
             <div class="task-name"> <h3>{{ item['taskName'] }} </h3></div>
             <div class="desc">{{ item['Description'] }}</div>
             <div class="buttons">
-                <a href="delete/{{ item.id }}" onclick="return confirm('You will permanently delete the task.')">DELETE</a>
-                <a href="update/{{ item.id }}">UPDATE</a>
+                <a class="delete-btn" href="delete/{{ item.id }}" onclick="return confirm('You will permanently delete the task.')">DELETE</a>
+                <a class="update-btn" href="update/{{ item.id }}">UPDATE</a>
             </div>
         </div>
     
