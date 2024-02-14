@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Update task</title>
+{% endblock head %}
+
+
+{% block header %}
+<h1>UPDATE TASK</h1>
+{% endblock header %}
+
+
+{% block body %}
+<h3>Hello world</h3>
+<form method="POST">
+        <label for="newName">Edit name</label>
+        <input type="text" name="newName" id="newName" value={{task.taskName}}>
+        <label for="newDesc">Edit Description</label>
+        <textarea name="newDesc" id="newDesc" cols="30" rows="10">{{task.Description}}</textarea>
+        <input type="submit" name="submit" value="submit">
+</form>
+
+{% endblock body %}

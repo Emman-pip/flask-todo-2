@@ -41,3 +41,22 @@ def delete(id):
         return redirect(url_for('pages.tasks'))
     except:
         return "There was an error deleting the task."
+    
+    
+@bp.route('/update/<id>', methods=("GET", "POST"))
+def update(id):
+    task = application.Todo.query.get_or_404(id)
+    
+    if request.method == "POST":
+        try:
+            title = request.form['newName']
+            desc = request.form['newDesc']
+            task.taskName = title
+            task.Description = desc
+            application.db.session.add(task)
+            application.db.session.commit()
+            return redirect(url_for('pages.tasks'))
+        except:
+            return "err"
+    else:
+        return render_template('pages/update.html', task=task)
