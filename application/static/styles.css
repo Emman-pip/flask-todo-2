@@ -9,14 +9,44 @@
     --color-4:#EDE9D0;
 }
 
-.about > * {
+.about > div {
     text-align: center;
 }
 
-.header {
-    text-align: center;
-    margin-block: 1rem;
+body {
+    background-image: url("./media/blob-scene-haikei.svg");
+    min-height: 100lvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
+.heroPage {
+    display: flex;
+    min-height: 100lvh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+    color: var(--color-4);
+}
+
+.heroPage > h1  {
+    font-weight: 900;
+    text-shadow: 2px 2px var(--color-2), 3px 3px var(--color-4) ;
+}
+
+h2 {
+    color: var(--color-4);
+    
+}
+
+.header {
+    font-weight: 900;
+    color: var(--color-4);
+    text-align: center;
+}
+
 
 
 .body {
@@ -75,6 +105,7 @@ textarea {
     padding: 0.3rem;
     border-radius: 0.3rem;
     border: 1px black solid;
+    background-color: var(--color-4);
 }
 
 textarea {
@@ -146,3 +177,9 @@ a {
   .line-animation:hover::after {
     transform: scaleX(1);
   }
+
+
+.header > h1 {
+    padding-block: 5rem;
+    text-shadow: 2px 2px var(--color-2), 3px 3px var(--color-4) ;
+}
