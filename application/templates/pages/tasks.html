@@ -6,6 +6,10 @@
 {% block body %}
     <h2>Current tasks</h2>
     <div class="tasks">
+        {% if tasks | length < 1 %}
+            <h3 class="noContent">Add new tasks in the add section</h3>
+        {% endif %}
+
         {% for item in tasks %}
         
         <div class="task-container">

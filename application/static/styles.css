@@ -37,6 +37,11 @@ body {
 }
 
 h2 {
+    text-shadow: 2px 2px var(--color-2) ;
+
+}
+
+h2, .noContent {
     color: var(--color-4);
     
 }
